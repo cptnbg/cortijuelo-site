@@ -35,9 +35,10 @@ export function SiteNav({ locale }: { locale: Locale }) {
           className="flex items-center gap-3 leading-tight font-display group"
         >
           <HRLogo
+            variant={scrolled ? "dark" : "light"}
             className={cn(
-              "w-9 h-8 md:w-11 md:h-10 shrink-0 transition-colors",
-              scrolled ? "text-olive-deep" : "text-ochre drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+              "w-10 h-10 md:w-12 md:h-12 shrink-0 object-contain transition-opacity",
+              scrolled ? "" : "drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
             )}
           />
           <div className="flex flex-col leading-tight">

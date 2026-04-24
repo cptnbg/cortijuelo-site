@@ -56,13 +56,13 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
         <div className="relative mx-auto max-w-6xl px-6 md:px-8 pt-20 pb-10">
           <div className="flex flex-col items-center text-center mb-14">
-            <HRLogo className="w-24 h-20 md:w-28 md:h-24 text-ochre mb-5" />
+            <HRLogo variant="light" className="w-20 h-20 md:w-24 md:h-24 object-contain mb-5 drop-shadow-[0_2px_12px_rgba(200,155,75,0.25)]" />
             <OliveBranch className="w-40 h-9 text-ochre/60 mb-5" />
             <p className="font-display italic text-ochre/90 text-xs md:text-sm tracking-[0.3em] uppercase">
               {locale === "es" ? "Entre olivares, desde" : "Among olive groves, since"}
             </p>
-            <p className="font-display text-5xl md:text-7xl text-linen mt-1 tracking-tight">
-              MCMXLVIII
+            <p className="font-display text-6xl md:text-7xl text-linen mt-1 tracking-tight tabular-nums">
+              1948
             </p>
             <p className="text-linen/60 text-[0.7rem] md:text-sm mt-2 tracking-[0.3em] uppercase">
               {yearsOpen}{" "}

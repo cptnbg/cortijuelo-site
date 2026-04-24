@@ -57,7 +57,7 @@ export function Hero({ locale }: { locale: Locale }) {
           className="font-display italic tracking-[0.35em] uppercase text-[0.65rem] rotate-90 origin-top-right"
           style={{ writingMode: "vertical-rl" }}
         >
-          EST · MCMXLVIII · MÁLAGA
+          EST · 1948 · MÁLAGA
         </motion.p>
       </div>
 
