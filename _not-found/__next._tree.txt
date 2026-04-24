@@ -1,2 +1,2 @@
-:HL["/cortijuelo-site/_next/static/chunks/001bs9610r510.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"EOUgEpafiFi4M_iwSUBRk"}
+:HL["/cortijuelo-site/_next/static/chunks/0jf9c3nwq_8am.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"w9ffoRw8Xm5HRAvBAczlm"}
