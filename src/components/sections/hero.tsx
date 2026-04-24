@@ -12,9 +12,21 @@ export function Hero({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear();
 
   const stats = [
-    { value: `${year - 1948}`, label: locale === "es" ? "años abiertos" : "years open" },
-    { value: "3", label: locale === "es" ? "generaciones" : "generations" },
-    { value: "5★", label: locale === "es" ? "Tripadvisor" : "Tripadvisor" },
+    {
+      value: `${year - 1948}`,
+      label: locale === "es" ? "años" : "years",
+      full: locale === "es" ? "años abiertos" : "years open",
+    },
+    {
+      value: "3",
+      label: locale === "es" ? "gen." : "gen.",
+      full: locale === "es" ? "generaciones" : "generations",
+    },
+    {
+      value: "5★",
+      label: "Tripadvisor",
+      full: "Tripadvisor",
+    },
   ];
 
   return (
@@ -67,7 +79,7 @@ export function Hero({ locale }: { locale: Locale }) {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-5xl md:text-7xl lg:text-[5.75rem] leading-[1.02] tracking-tight max-w-4xl"
+            className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-[5.75rem] leading-[1.05] md:leading-[1.02] tracking-tight max-w-4xl break-words hyphens-auto"
           >
             <span className="block">{titleLine1}</span>
             {titleLine2 && (
@@ -126,21 +138,22 @@ export function Hero({ locale }: { locale: Locale }) {
           transition={{ duration: 1, delay: 1.3 }}
           className="absolute inset-x-0 bottom-0 border-t border-linen/15 bg-charcoal/60 backdrop-blur-md"
         >
-          <div className="mx-auto max-w-6xl px-6 md:px-8 py-5 flex items-center justify-between gap-6 text-linen">
+          <div className="mx-auto max-w-6xl px-5 md:px-8 py-4 md:py-5 flex items-center justify-between gap-4 md:gap-6 text-linen">
             <div className="hidden md:block font-display italic text-ochre/90 text-sm tracking-[0.28em] uppercase">
               {locale === "es" ? "Tres generaciones" : "Three generations"}
             </div>
-            <div className="flex items-center gap-6 md:gap-12 ml-auto">
+            <div className="flex items-center gap-3 sm:gap-5 md:gap-12 mx-auto md:ml-auto md:mx-0 flex-wrap justify-center">
               {stats.map((stat) => (
                 <div
-                  key={stat.label}
-                  className="flex items-baseline gap-2.5 border-l border-linen/15 pl-6 md:pl-10 first:border-l-0 first:pl-0"
+                  key={stat.full}
+                  className="flex items-baseline gap-1.5 sm:gap-2.5 border-l border-linen/15 pl-3 sm:pl-5 md:pl-10 first:border-l-0 first:pl-0"
                 >
-                  <span className="font-display text-3xl md:text-4xl text-ochre tabular-nums">
+                  <span className="font-display text-2xl sm:text-3xl md:text-4xl text-ochre tabular-nums leading-none">
                     {stat.value}
                   </span>
-                  <span className="text-[0.65rem] md:text-xs uppercase tracking-[0.22em] text-linen/70">
-                    {stat.label}
+                  <span className="text-[0.55rem] sm:text-[0.65rem] md:text-xs uppercase tracking-[0.18em] md:tracking-[0.22em] text-linen/70 leading-tight">
+                    <span className="sm:hidden">{stat.label}</span>
+                    <span className="hidden sm:inline">{stat.full}</span>
                   </span>
                 </div>
               ))}

@@ -21,17 +21,17 @@ export default async function RestaurantPage({
         background={r.pageTitleBackground}
       />
 
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-3xl px-6 md:px-8">
+      <section className="py-20 md:py-32">
+        <div className="mx-auto max-w-3xl px-5 md:px-8">
           <FadeIn>
-            <p className="font-display italic text-ochre text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="font-display italic text-ochre text-xs md:text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-4">
               {locale === "es" ? "Tres generaciones · 1948" : "Three generations · 1948"}
             </p>
-            <h2 className="font-display text-4xl md:text-5xl text-olive-deep leading-tight mb-8">
+            <h2 className="font-display text-3xl md:text-5xl text-olive-deep leading-[1.1] mb-6 md:mb-8">
               {t(r.intro.heading, locale)}
             </h2>
-            <div className="prose prose-lg max-w-none text-charcoal/85 leading-relaxed">
-              <p className="whitespace-pre-line first-letter:font-display first-letter:text-6xl first-letter:text-terracotta first-letter:float-left first-letter:leading-[0.85] first-letter:pr-2 first-letter:pt-1">
+            <div className="max-w-none text-charcoal/85 leading-relaxed text-base md:text-lg">
+              <p className="whitespace-pre-line first-letter:font-display first-letter:text-5xl md:first-letter:text-6xl first-letter:text-terracotta first-letter:float-left first-letter:leading-[0.85] first-letter:pr-2 first-letter:pt-1">
                 {t(r.intro.body, locale)}
               </p>
             </div>

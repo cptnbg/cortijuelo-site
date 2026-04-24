@@ -5,39 +5,45 @@ import { SectionDivider } from "@/components/olive-branch";
 
 const SIGNATURES = {
   es: [
-    { name: "Chivo malagueño al ajillo", desc: "Nuestro plato estrella, lento y lleno de ajo." },
-    { name: "Conejo a la leña", desc: "Conejo de monte asado al fuego de encina." },
-    { name: "Cordero a la brasa", desc: "Cordero lechal sobre sarmiento." },
-    { name: "Porra caliente", desc: "Clásico antequerano servido templado." },
-    { name: "Churrasco de cerdo ibérico", desc: "Al corte, con sal gorda y romero." },
-    { name: "Migas de la sierra", desc: "Pan, ajo, aceite de oliva y pimentón." },
+    { name: "Chivo malagueño al ajillo", kicker: "Plato estrella", desc: "Cocción lenta, ajo confitado y aceite de oliva virgen.", stand: "De la sierra" },
+    { name: "Conejo a la leña", kicker: "Caza", desc: "Conejo de monte asado al fuego de encina.", stand: "Del campo" },
+    { name: "Cordero a la brasa", kicker: "Brasa", desc: "Cordero lechal sobre sarmiento de vid.", stand: "De Antequera" },
+    { name: "Porra caliente", kicker: "Cuchara", desc: "Clásico antequerano servido templado.", stand: "De la casa" },
+    { name: "Churrasco ibérico", kicker: "Parrilla", desc: "Al corte, con sal gorda y romero.", stand: "Cerdo ibérico" },
+    { name: "Migas de la sierra", kicker: "Pastores", desc: "Pan, ajo, aceite y pimentón.", stand: "Del pastor" },
   ],
   en: [
-    { name: "Málaga-style garlic goat", desc: "Our signature dish, slow-braised and rich with garlic." },
-    { name: "Wood-fire rabbit", desc: "Wild rabbit roasted over holm-oak embers." },
-    { name: "Grilled lamb", desc: "Milk-fed lamb cooked over vine cuttings." },
-    { name: "Hot porra", desc: "Antequera classic, served warm." },
-    { name: "Iberian pork churrasco", desc: "Cut to order, coarse salt and rosemary." },
-    { name: "Sierra migas", desc: "Bread, garlic, olive oil and pimentón." },
+    { name: "Málaga-style garlic goat", kicker: "Signature", desc: "Slow-braised, confit garlic and extra-virgin olive oil.", stand: "From the sierra" },
+    { name: "Wood-fire rabbit", kicker: "Game", desc: "Wild rabbit roasted over holm-oak embers.", stand: "From the fields" },
+    { name: "Grilled lamb", kicker: "Grill", desc: "Milk-fed lamb over vine cuttings.", stand: "From Antequera" },
+    { name: "Hot porra", kicker: "Spoon", desc: "Antequera classic, served warm.", stand: "House recipe" },
+    { name: "Iberian churrasco", kicker: "Grill", desc: "Cut to order, coarse salt and rosemary.", stand: "Iberian pork" },
+    { name: "Sierra migas", kicker: "Shepherds", desc: "Bread, garlic, olive oil, pimentón.", stand: "Shepherd's dish" },
   ],
 } as const;
 
 export function Gastronomy({ locale }: { locale: Locale }) {
   const dishes = content.home.gastronomy.dishes;
   const signatures = SIGNATURES[locale];
+
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
+      <div
+        className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-[0.04] blur-3xl bg-terracotta pointer-events-none"
+        aria-hidden
+      />
+
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 md:mb-20">
             <SectionDivider
               label={locale === "es" ? "Nuestra cocina" : "Our kitchen"}
               className="mb-6"
             />
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-olive-deep">
+            <h2 className="font-display text-4xl md:text-6xl text-olive-deep leading-[1.05]">
               {t(content.home.gastronomy.heading, locale)}
             </h2>
-            <p className="max-w-2xl mx-auto mt-5 text-charcoal/80 leading-relaxed">
+            <p className="max-w-2xl mx-auto mt-5 text-charcoal/75 leading-relaxed">
               {locale === "es"
                 ? "Cocina de pastores, de cazadores y de campo. Platos sencillos, memoria de generaciones, productos de los cortijos y olivares que nos rodean."
                 : "Cuisine of shepherds, hunters and the countryside. Simple dishes, generational memory, produce from the farms and olive groves that surround us."}
@@ -45,39 +51,66 @@ export function Gastronomy({ locale }: { locale: Locale }) {
           </div>
         </FadeIn>
 
-        <Stagger className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6" gap={0.06}>
-          {dishes.map((dish, i) => (
-            <StaggerItem key={i} className="group">
-              <div className="relative aspect-square overflow-hidden bg-muted">
+        <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7" gap={0.08}>
+          {dishes.map((dish, i) => {
+            const sig = signatures[i];
+            const isLarge = i === 0 || i === 4;
+            return (
+              <StaggerItem
+                key={i}
+                className={`group relative ${isLarge ? "md:col-span-2" : ""}`}
+              >
                 <div
-                  className="absolute inset-0 bg-cover bg-center scale-105 group-hover:scale-110 transition-transform duration-700"
-                  style={{ backgroundImage: `url(${img(dish.image)})` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="font-display text-linen text-lg leading-tight">
-                    {signatures[i]?.name}
-                  </p>
-                  <p className="text-linen/75 text-xs mt-1 leading-relaxed">
-                    {signatures[i]?.desc}
-                  </p>
+                  className={`relative overflow-hidden bg-charcoal ${
+                    isLarge ? "aspect-[8/5]" : "aspect-[4/5]"
+                  }`}
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center scale-105 group-hover:scale-110 transition-transform duration-[1200ms]"
+                    style={{ backgroundImage: `url(${img(dish.image)})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/20 to-transparent" />
+
+                  <div className="absolute top-4 left-4 flex items-center gap-2">
+                    <span className="px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.22em] bg-linen/90 text-olive-deep">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.22em] bg-terracotta text-linen">
+                      {sig.kicker}
+                    </span>
+                  </div>
+
+                  <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 text-linen">
+                    <p className="text-[0.65rem] uppercase tracking-[0.25em] text-ochre/90 mb-1.5 font-display italic">
+                      {sig.stand}
+                    </p>
+                    <h3 className="font-display text-xl md:text-2xl leading-tight">
+                      {sig.name}
+                    </h3>
+                    <p className="text-linen/80 text-sm mt-2 leading-relaxed max-h-0 group-hover:max-h-24 overflow-hidden transition-all duration-500">
+                      {sig.desc}
+                    </p>
+                  </div>
                 </div>
-                <div className="absolute top-3 left-3 bg-linen/92 backdrop-blur px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.2em] text-olive-deep">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-              </div>
-            </StaggerItem>
-          ))}
+              </StaggerItem>
+            );
+          })}
         </Stagger>
 
         <FadeIn delay={0.2}>
-          <div className="mt-14 text-center">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
             <Link
               href={localizedPath("/menu", locale)}
               className="inline-flex items-center gap-3 bg-olive-deep text-linen hover:bg-charcoal transition-colors px-8 py-3.5 font-medium tracking-wide text-sm uppercase"
             >
               {locale === "es" ? "Ver la carta completa" : "See the full menu"} →
             </Link>
+            <a
+              href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+              className="inline-flex items-center gap-3 border border-olive-deep/30 text-olive-deep hover:border-olive-deep transition-colors px-8 py-3.5 font-medium text-sm tabular-nums"
+            >
+              {locale === "es" ? "Reservar" : "Book"} · {content.contact.phone}
+            </a>
           </div>
         </FadeIn>
       </div>

@@ -35,9 +35,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           </div>
           <a
             href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
-            className="inline-flex items-center gap-3 bg-linen text-terracotta hover:bg-ochre hover:text-charcoal transition-colors px-7 py-5 font-display text-2xl md:text-3xl tabular-nums shadow-[0_8px_40px_-10px_rgba(0,0,0,0.3)]"
+            className="inline-flex items-center gap-3 bg-linen text-terracotta hover:bg-ochre hover:text-charcoal transition-colors px-5 md:px-7 py-4 md:py-5 font-display text-xl sm:text-2xl md:text-3xl tabular-nums shadow-[0_8px_40px_-10px_rgba(0,0,0,0.3)] whitespace-nowrap"
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-4 h-4 md:w-5 md:h-5 shrink-0" />
             {content.contact.phone}
           </a>
         </div>

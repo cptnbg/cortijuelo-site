@@ -34,9 +34,10 @@
   },
   "nav": [
     { "es": "Inicio", "en": "Home", "path": "/" },
-    { "es": "Restaurante", "en": "Restaurant", "path": "/restaurante" },
-    { "es": "Galería", "en": "Gallery", "path": "/galeria" },
-    { "es": "Contacto", "en": "Contact", "path": "/contacto" }
+    { "es": "Restaurante", "en": "Restaurant", "path": "/restaurant" },
+    { "es": "La Carta", "en": "The Menu", "path": "/menu" },
+    { "es": "Galería", "en": "Gallery", "path": "/gallery" },
+    { "es": "Contacto", "en": "Contact", "path": "/contact" }
   ],
   "home": {
     "hero": {
