@@ -56,29 +56,33 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
         <div className="relative mx-auto max-w-6xl px-6 md:px-8 pt-20 pb-10">
           <div className="flex flex-col items-center text-center mb-14">
-            <HRLogo variant="light" className="w-20 h-20 md:w-24 md:h-24 object-contain mb-5 drop-shadow-[0_2px_12px_rgba(200,155,75,0.25)]" />
-            <OliveBranch className="w-40 h-9 text-ochre/60 mb-5" />
-            <p className="font-display italic text-ochre/90 text-xs md:text-sm tracking-[0.3em] uppercase">
-              {locale === "es" ? "Entre olivares, desde" : "Among olive groves, since"}
-            </p>
-            <p className="font-display text-6xl md:text-7xl text-linen mt-1 tracking-tight tabular-nums">
-              1948
-            </p>
-            <p className="text-linen/60 text-[0.7rem] md:text-sm mt-2 tracking-[0.3em] uppercase">
-              {yearsOpen}{" "}
-              {locale === "es" ? "años · 3 generaciones" : "years · 3 generations"}
+            <HRLogo
+              variant="light"
+              className="w-16 h-16 md:w-20 md:h-20 object-contain mb-4 drop-shadow-[0_2px_12px_rgba(200,155,75,0.25)]"
+            />
+            <span className="text-[0.6rem] md:text-[0.65rem] tracking-[0.3em] uppercase text-ochre/90">
+              Antigua Venta
+            </span>
+            <span className="font-display italic text-3xl md:text-4xl text-linen leading-none mt-1">
+              El Cortijuelo
+            </span>
+            <OliveBranch className="w-32 h-8 text-ochre/55 mt-5" />
+            <p className="text-linen/55 text-[0.6rem] md:text-[0.7rem] mt-3 tracking-[0.3em] uppercase tabular-nums">
+              {locale === "es" ? "Desde 1948" : "Since 1948"}
+              <span className="mx-2 text-ochre/50">·</span>
+              {yearsOpen} {locale === "es" ? "años" : "years"}
+              <span className="mx-2 text-ochre/50">·</span>
+              {locale === "es" ? "3 generaciones" : "3 generations"}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10 md:gap-14">
             {/* Brand */}
             <div>
-              <h3 className="font-display text-2xl text-linen mb-3 leading-tight">
-                Antigua Venta
-                <br />
-                <span className="italic text-ochre">El Cortijuelo</span>
-              </h3>
-              <p className="text-sm leading-relaxed text-linen/70">
+              <h4 className="text-[0.7rem] uppercase tracking-[0.28em] text-ochre mb-5">
+                {locale === "es" ? "La casa" : "The house"}
+              </h4>
+              <p className="text-sm leading-relaxed text-linen/75">
                 {locale === "es"
                   ? "Cocina tradicional andaluza. Chivo, conejo y cordero a la brasa, en la sierra de Málaga."
                   : "Traditional Andalusian cuisine. Grilled goat, rabbit and lamb, in the Málaga sierra."}
