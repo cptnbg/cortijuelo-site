@@ -172,13 +172,10 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
           </div>
 
-          <div className="mt-14 pt-8 border-t border-linen/15 flex flex-col items-center gap-2 text-xs text-linen/55 text-center">
+          <div className="mt-14 pt-8 border-t border-linen/15 text-center text-xs text-linen/55">
             <p>
               © {year} Antigua Venta El Cortijuelo ·{" "}
               {t(content.footer.copyright, locale)}.
-            </p>
-            <p className="italic font-display text-linen/70">
-              Hermanos Romero · Villanueva del Trabuco · Málaga
             </p>
           </div>
         </div>
