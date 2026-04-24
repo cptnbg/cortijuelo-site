@@ -153,7 +153,7 @@ export function LoadingScreen() {
                 style={{ originX: 1 }}
                 className="block w-8 md:w-10 h-px bg-linen/40"
               />
-              <span className="tabular-nums">Desde 1948</span>
+              <span className="tabular-nums">EST. 1948</span>
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
