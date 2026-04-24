@@ -22,8 +22,8 @@ export function img(filename: string): string {
 }
 
 export function localizedPath(path: string, locale: Locale): string {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  if (path === "/") return `${base}/${locale}/`;
+  // Next.js <Link> auto-prepends basePath — do NOT add it here.
+  if (path === "/") return `/${locale}/`;
   if (path.startsWith("tel:") || path.startsWith("mailto:") || path.startsWith("http")) return path;
-  return `${base}/${locale}${path.startsWith("/") ? path : `/${path}`}/`;
+  return `/${locale}${path.startsWith("/") ? path : `/${path}`}/`;
 }

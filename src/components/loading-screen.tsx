@@ -8,18 +8,9 @@ export function LoadingScreen() {
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
-    // Only show on first visit in this tab/session
     if (typeof window === "undefined") return;
-    const key = "cortijuelo-splash-seen";
-    if (sessionStorage.getItem(key)) {
-      setVisible(false);
-      return;
-    }
     setShown(true);
-    const timer = setTimeout(() => {
-      setVisible(false);
-      sessionStorage.setItem(key, "1");
-    }, 1600);
+    const timer = setTimeout(() => setVisible(false), 2400);
     return () => clearTimeout(timer);
   }, []);
 

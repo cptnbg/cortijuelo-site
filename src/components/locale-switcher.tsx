@@ -7,12 +7,10 @@ import { cn } from "@/lib/utils";
 
 export function LocaleSwitcher({ current, className }: { current: Locale; className?: string }) {
   const pathname = usePathname() || `/${current}`;
-  const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const stripped = base && pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
-
+  // Next.js usePathname returns the path WITHOUT basePath, and <Link> adds it back.
   const makeHref = (target: Locale) => {
-    const withoutLocale = stripped.replace(/^\/(es|en)/, "") || "/";
-    return `${base}/${target}${withoutLocale}`.replace(/\/\/+/g, "/");
+    const withoutLocale = pathname.replace(/^\/(es|en)/, "") || "/";
+    return `/${target}${withoutLocale}`.replace(/\/\/+/g, "/");
   };
 
   return (
