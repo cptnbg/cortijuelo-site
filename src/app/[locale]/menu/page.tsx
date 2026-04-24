@@ -93,8 +93,8 @@ export default async function MenuPage({
               />
               <p className="text-charcoal/80 leading-relaxed text-sm md:text-base">
                 {locale === "es"
-                  ? "Cocinamos lo que da la tierra y el mercado. Los precios son orientativos y pueden variar según temporada. S/M indica precio según mercado. Consulta con el equipo sobre sugerencias del día, alergias e intolerancias."
-                  : "We cook what the land and market give us. Prices are indicative and may vary by season. \"Market\" means priced daily. Please ask the team about daily specials, allergies and dietary needs."}
+                  ? "Cocina de campo, lo que da la sierra y el mercado de cada día. Los precios son orientativos y pueden variar según temporada. S/M indica precio según mercado. Pregunta al equipo por las sugerencias del día, alérgenos e intolerancias."
+                  : "Country cooking — whatever the sierra and the daily market bring. Prices are indicative and may vary by season. \"Market\" means priced daily. Please ask the team about daily specials, allergens and dietary needs."}
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
                 <a

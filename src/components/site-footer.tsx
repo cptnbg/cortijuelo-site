@@ -174,7 +174,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
               <ul className="space-y-2 text-sm">
                 {[
                   locale === "es" ? "Chivo malagueño al ajillo" : "Málaga-style garlic goat",
-                  locale === "es" ? "Conejo a la leña" : "Wood-fire rabbit",
+                  locale === "es" ? "Conejo al ajillo" : "Garlic rabbit",
                   locale === "es" ? "Cordero a la brasa" : "Grilled lamb",
                   locale === "es" ? "Porra caliente" : "Hot porra",
                   locale === "es" ? "Migas de la sierra" : "Sierra migas",

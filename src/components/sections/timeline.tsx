@@ -17,12 +17,12 @@ const EVENTS = {
     {
       year: "1970s",
       title: "La brasa como firma",
-      body: "La leña de encina y los platos de campo, chivo al ajillo, conejo y cordero, convierten la casa en parada obligada para la comarca.",
+      body: "La brasa de encina y los platos de campo —chivo y conejo al ajillo, cordero a la brasa— convierten la casa en parada obligada para toda la comarca.",
     },
     {
       year: "Hoy",
       title: "Hermanos Romero",
-      body: "La tercera generación mantiene las recetas de siempre. Cocina lenta, producto local, fuego de leña.",
+      body: "La tercera generación mantiene las recetas de siempre. Cocción lenta, producto de la sierra, brasa de encina.",
     },
   ],
   en: [

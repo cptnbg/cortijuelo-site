@@ -57,8 +57,8 @@ export function SignatureDish({ locale }: { locale: Locale }) {
           </p>
           <p className="text-linen/85 leading-relaxed max-w-lg mb-8">
             {locale === "es"
-              ? "Lo mismo para el conejo de monte. Leña de encina, hierbas de la sierra, paciencia."
-              : "The same goes for wild rabbit. Holm-oak fire, mountain herbs, patience."}
+              ? "Lo mismo para el conejo al ajillo. Brasa de encina, hierbas de la sierra, paciencia."
+              : "The same for our garlic rabbit. Holm-oak embers, mountain herbs, patience."}
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link

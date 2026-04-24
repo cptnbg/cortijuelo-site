@@ -5,20 +5,20 @@ import { SectionDivider } from "@/components/olive-branch";
 
 const SIGNATURES = {
   es: [
-    { name: "Chivo malagueño al ajillo", kicker: "Plato estrella", desc: "Cocción lenta, ajo confitado y aceite de oliva virgen.", stand: "De la sierra" },
-    { name: "Conejo a la leña", kicker: "Caza", desc: "Conejo de monte asado al fuego de encina.", stand: "Del campo" },
-    { name: "Cordero a la brasa", kicker: "Brasa", desc: "Cordero lechal sobre sarmiento de vid.", stand: "De Antequera" },
-    { name: "Porra caliente", kicker: "Cuchara", desc: "Clásico antequerano servido templado.", stand: "De la casa" },
-    { name: "Churrasco ibérico", kicker: "Parrilla", desc: "Al corte, con sal gorda y romero.", stand: "Cerdo ibérico" },
-    { name: "Migas de la sierra", kicker: "Pastores", desc: "Pan, ajo, aceite y pimentón.", stand: "Del pastor" },
+    { name: "Chivo malagueño al ajillo", kicker: "Plato estrella", desc: "Cocción lenta, ajo confitado y aceite de oliva virgen extra.", stand: "De la sierra" },
+    { name: "Conejo al ajillo", kicker: "Especialidad", desc: "Lento, con ajo y vino blanco. Receta de la casa desde 1948.", stand: "Del campo" },
+    { name: "Cordero a la brasa", kicker: "Brasa", desc: "Cordero lechal sobre sarmiento de vid, con sal gorda y romero.", stand: "De Antequera" },
+    { name: "Porra caliente", kicker: "Cuchara", desc: "Clásico antequerano, servido templado, con su huevo y su jamón.", stand: "De la casa" },
+    { name: "Churrasco ibérico", kicker: "Parrilla", desc: "Al corte, con sal gorda y romero del monte.", stand: "Cerdo ibérico" },
+    { name: "Migas de la sierra", kicker: "Pastores", desc: "Pan, ajo, aceite de oliva y pimentón de la Vera.", stand: "Del pastor" },
   ],
   en: [
     { name: "Málaga-style garlic goat", kicker: "Signature", desc: "Slow-braised, confit garlic and extra-virgin olive oil.", stand: "From the sierra" },
-    { name: "Wood-fire rabbit", kicker: "Game", desc: "Wild rabbit roasted over holm-oak embers.", stand: "From the fields" },
-    { name: "Grilled lamb", kicker: "Grill", desc: "Milk-fed lamb over vine cuttings.", stand: "From Antequera" },
-    { name: "Hot porra", kicker: "Spoon", desc: "Antequera classic, served warm.", stand: "House recipe" },
-    { name: "Iberian churrasco", kicker: "Grill", desc: "Cut to order, coarse salt and rosemary.", stand: "Iberian pork" },
-    { name: "Sierra migas", kicker: "Shepherds", desc: "Bread, garlic, olive oil, pimentón.", stand: "Shepherd's dish" },
+    { name: "Garlic rabbit", kicker: "House dish", desc: "Slow-cooked with garlic and white wine. Our 1948 recipe.", stand: "From the fields" },
+    { name: "Grilled lamb", kicker: "From the grill", desc: "Milk-fed lamb over vine cuttings, with coarse salt and rosemary.", stand: "From Antequera" },
+    { name: "Hot porra", kicker: "Spoon dish", desc: "Antequera classic, served warm, topped with egg and ham.", stand: "House recipe" },
+    { name: "Iberian churrasco", kicker: "Grill", desc: "Cut to order, with coarse salt and mountain rosemary.", stand: "Iberian pork" },
+    { name: "Sierra migas", kicker: "Shepherd's dish", desc: "Bread, garlic, olive oil, pimentón de la Vera.", stand: "Shepherd's plate" },
   ],
 } as const;
 
