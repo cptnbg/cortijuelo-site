@@ -11,7 +11,7 @@ export function LoadingScreen() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     setShown(true);
-    const timer = setTimeout(() => setVisible(false), 3600);
+    const timer = setTimeout(() => setVisible(false), 4800);
     return () => clearTimeout(timer);
   }, []);
 
