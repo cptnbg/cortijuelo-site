@@ -6,6 +6,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { content, localizedPath, type Locale } from "@/lib/content";
 import { NAV_PATHS } from "@/lib/nav";
 import { LocaleSwitcher } from "./locale-switcher";
+import { HRLogo } from "./hr-logo";
 import { cn } from "@/lib/utils";
 
 export function SiteNav({ locale }: { locale: Locale }) {
@@ -31,24 +32,32 @@ export function SiteNav({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
         <Link
           href={localizedPath("/", locale)}
-          className="flex flex-col leading-tight font-display"
+          className="flex items-center gap-3 leading-tight font-display group"
         >
-          <span
+          <HRLogo
             className={cn(
-              "text-[0.6rem] tracking-[0.25em] uppercase transition-colors",
-              scrolled ? "text-olive" : "text-olive-soft"
+              "w-9 h-8 md:w-11 md:h-10 shrink-0 transition-colors",
+              scrolled ? "text-olive-deep" : "text-ochre drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
             )}
-          >
-            Antigua Venta
-          </span>
-          <span
-            className={cn(
-              "text-lg md:text-xl font-semibold transition-colors",
-              scrolled ? "text-olive-deep" : "text-linen drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
-            )}
-          >
-            El Cortijuelo
-          </span>
+          />
+          <div className="flex flex-col leading-tight">
+            <span
+              className={cn(
+                "text-[0.55rem] md:text-[0.6rem] tracking-[0.25em] uppercase transition-colors",
+                scrolled ? "text-olive" : "text-ochre/90"
+              )}
+            >
+              Antigua Venta
+            </span>
+            <span
+              className={cn(
+                "font-display italic text-base md:text-lg leading-none transition-colors",
+                scrolled ? "text-olive-deep" : "text-linen drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
+              )}
+            >
+              El Cortijuelo
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">

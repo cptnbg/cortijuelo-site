@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { content } from "@/lib/content";
+import { LoadingScreen } from "@/components/loading-screen";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -32,7 +33,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" className={`${inter.variable} ${cormorant.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LoadingScreen />
+        {children}
+      </body>
     </html>
   );
 }

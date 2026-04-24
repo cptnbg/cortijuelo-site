@@ -4,6 +4,7 @@ import { content, img, localizedPath, t, type Locale } from "@/lib/content";
 import { OliveBranch } from "./olive-branch";
 import { NAV_PATHS } from "@/lib/nav";
 import { FacebookIcon, InstagramIcon, TripadvisorIcon } from "./social-icons";
+import { HRLogo } from "./hr-logo";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear();
@@ -55,12 +56,15 @@ export function SiteFooter({ locale }: { locale: Locale }) {
 
         <div className="relative mx-auto max-w-6xl px-6 md:px-8 pt-20 pb-10">
           <div className="flex flex-col items-center text-center mb-14">
-            <OliveBranch className="w-40 h-9 text-ochre/70 mb-4" />
-            <p className="font-display italic text-ochre/90 text-sm tracking-[0.3em] uppercase">
+            <HRLogo className="w-24 h-20 md:w-28 md:h-24 text-ochre mb-5" />
+            <OliveBranch className="w-40 h-9 text-ochre/60 mb-5" />
+            <p className="font-display italic text-ochre/90 text-xs md:text-sm tracking-[0.3em] uppercase">
               {locale === "es" ? "Entre olivares, desde" : "Among olive groves, since"}
             </p>
-            <p className="font-display text-6xl md:text-7xl text-linen mt-1">1948</p>
-            <p className="text-linen/60 text-sm mt-1 tracking-wider">
+            <p className="font-display text-5xl md:text-7xl text-linen mt-1 tracking-tight">
+              MCMXLVIII
+            </p>
+            <p className="text-linen/60 text-[0.7rem] md:text-sm mt-2 tracking-[0.3em] uppercase">
               {yearsOpen}{" "}
               {locale === "es" ? "años · 3 generaciones" : "years · 3 generations"}
             </p>
