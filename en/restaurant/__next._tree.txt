@@ -1,6 +1,6 @@
-:HL["/cortijuelo-site/_next/static/chunks/0_a_fo4bt1xc-.css","style"]
+:HL["/cortijuelo-site/_next/static/chunks/0yvbpqg6tva34.css","style"]
 :HL["/cortijuelo-site/_next/static/media/01e4147cff8141ee-s.p.10ked.7w885.g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cortijuelo-site/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cortijuelo-site/_next/static/media/8bd76523131fa0fc-s.p.0jox806dnq5~c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/cortijuelo-site/images/hr-logo-light.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"en","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"restaurant","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"yxSv0b4RV8Lz9g1LRNy0w"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"en","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"restaurant","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"hF16y1bfy3oL_goxf8DXp"}
