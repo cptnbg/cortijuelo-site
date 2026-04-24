@@ -10,10 +10,10 @@ export function SpacesGrid({ locale }: { locale: Locale }) {
     <section className="relative py-24 md:py-32 bg-linen-soft">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <div className="text-center mb-16">
-          <p className="text-[0.7rem] uppercase tracking-[0.3em] text-olive mb-3">
+          <p className="text-[0.6rem] md:text-[0.65rem] tracking-[0.3em] uppercase text-olive mb-2">
             {t(content.home.sectionTitle.kicker, locale)}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl text-olive-deep">
+          <h2 className="font-display italic text-4xl md:text-5xl text-olive-deep leading-tight">
             {t(content.home.sectionTitle.heading, locale)}
           </h2>
         </div>
