@@ -25,9 +25,10 @@ export function SiteNav({ locale }: { locale: Locale }) {
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-linen/92 backdrop-blur-md border-b border-olive/15 shadow-[0_1px_0_0_rgba(0,0,0,0.03)]"
+          ? "border-b border-olive/15 shadow-[0_1px_0_0_rgba(0,0,0,0.03)]"
           : "bg-transparent"
       )}
+      style={scrolled ? { backgroundColor: "#f5ede0" } : undefined}
     >
       <div className="mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
         <Link
