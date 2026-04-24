@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock, ChevronRight, Utensils } from "lucide-react";
+import { Phone, MapPin, Clock, ChevronRight } from "lucide-react";
 import { content, img, localizedPath, t, type Locale } from "@/lib/content";
 import { OliveBranch } from "./olive-branch";
 import { NAV_PATHS } from "@/lib/nav";
@@ -70,9 +70,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-10 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-10 md:gap-14">
             {/* Brand */}
-            <div className="md:col-span-1">
+            <div>
               <h3 className="font-display text-2xl text-linen mb-3 leading-tight">
                 Antigua Venta
                 <br />
@@ -166,32 +166,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
               </ul>
             </div>
 
-            {/* Specialties */}
-            <div>
-              <h4 className="text-[0.7rem] uppercase tracking-[0.28em] text-ochre mb-5">
-                {locale === "es" ? "De la casa" : "From the kitchen"}
-              </h4>
-              <ul className="space-y-2 text-sm">
-                {[
-                  locale === "es" ? "Chivo malagueño al ajillo" : "Málaga-style garlic goat",
-                  locale === "es" ? "Conejo al ajillo" : "Garlic rabbit",
-                  locale === "es" ? "Cordero a la brasa" : "Grilled lamb",
-                  locale === "es" ? "Porra caliente" : "Hot porra",
-                  locale === "es" ? "Migas de la sierra" : "Sierra migas",
-                ].map((dish) => (
-                  <li
-                    key={dish}
-                    className="flex items-center gap-2 text-linen/75 font-display italic"
-                  >
-                    <Utensils className="w-3 h-3 text-terracotta/80" />
-                    {dish}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-linen/15 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-linen/55">
+          <div className="mt-14 pt-8 border-t border-linen/15 flex flex-col items-center gap-2 text-xs text-linen/55 text-center">
             <p>
               © {year} Antigua Venta El Cortijuelo ·{" "}
               {t(content.footer.copyright, locale)}.
