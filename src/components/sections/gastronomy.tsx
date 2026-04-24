@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { content, img, localizedPath, t, type Locale } from "@/lib/content";
 import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
-import { SectionDivider } from "@/components/olive-branch";
+import { Rule } from "@/components/ornaments";
 
 const SIGNATURES = {
   es: [
@@ -36,7 +36,7 @@ export function Gastronomy({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <FadeIn>
           <div className="text-center mb-16 md:mb-20">
-            <SectionDivider
+            <Rule
               label={locale === "es" ? "Nuestra cocina" : "Our kitchen"}
               className="mb-6"
             />

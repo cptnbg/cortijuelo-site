@@ -1,5 +1,5 @@
 import { FadeIn } from "./motion";
-import { SectionDivider } from "./olive-branch";
+import { StarMark } from "./ornaments";
 import { img } from "@/lib/content";
 
 export function PageHeader({
@@ -30,7 +30,7 @@ export function PageHeader({
           <h1 className="font-display text-5xl md:text-7xl leading-[1.02] tracking-tight">
             {title}
           </h1>
-          <SectionDivider className="mt-8" />
+          <StarMark className="mt-8 w-32 h-4 mx-auto" />
         </FadeIn>
       </div>
     </section>

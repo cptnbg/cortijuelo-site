@@ -1,7 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { content, img, t, type Locale } from "@/lib/content";
 import { Stagger, StaggerItem } from "@/components/motion";
-import { SectionDivider } from "@/components/olive-branch";
+import { Rule } from "@/components/ornaments";
 
 export function Testimonials({ locale }: { locale: Locale }) {
   const items = content.home.testimonials;
@@ -9,7 +9,7 @@ export function Testimonials({ locale }: { locale: Locale }) {
     <section className="relative py-24 md:py-32 bg-linen-soft">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <div className="text-center mb-16">
-          <SectionDivider
+          <Rule
             label={t(content.home.testimonialsHeading.kicker, locale) as string}
             className="mb-6"
           />

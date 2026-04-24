@@ -1,6 +1,6 @@
 import { type Locale } from "@/lib/content";
 import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
-import { SectionDivider } from "@/components/olive-branch";
+import { Rule } from "@/components/ornaments";
 
 const EVENTS = {
   es: [
@@ -57,7 +57,7 @@ export function Timeline({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-4xl px-6 md:px-8">
         <FadeIn>
           <div className="text-center mb-16">
-            <SectionDivider
+            <Rule
               label={locale === "es" ? "Tres generaciones" : "Three generations"}
               className="mb-6"
             />

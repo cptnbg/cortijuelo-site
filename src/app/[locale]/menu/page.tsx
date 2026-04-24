@@ -3,7 +3,7 @@ import { Download, Phone, Utensils, Flame, Soup, Cake, Fish, Wine, Sparkles } fr
 import { content, img, type Locale } from "@/lib/content";
 import { PageHeader } from "@/components/page-header";
 import { FadeIn, Stagger, StaggerItem } from "@/components/motion";
-import { SectionDivider } from "@/components/olive-branch";
+import { Rule, StarMark, AzulejoMark } from "@/components/ornaments";
 import { MENU } from "@/lib/menu-data";
 import type { MenuItem } from "@/lib/menu-data";
 
@@ -87,7 +87,7 @@ export default async function MenuPage({
         <div className="mx-auto max-w-5xl px-6 md:px-8">
           <FadeIn>
             <div className="max-w-2xl mx-auto text-center">
-              <SectionDivider
+              <Rule
                 label={locale === "es" ? "Nuestra carta" : "Our menu"}
                 className="mb-5"
               />
@@ -165,7 +165,7 @@ export default async function MenuPage({
                     )}
                   </div>
                   <div className="flex-1 pb-2">
-                    <SectionDivider className="justify-start text-olive mb-4" />
+                    <span className="block w-16 h-px bg-ochre mb-5" aria-hidden />
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-olive-deep leading-[1.02] tracking-tight">
                       {section.title}
                     </h2>
@@ -215,7 +215,7 @@ export default async function MenuPage({
           style={{ backgroundImage: `url(${img("bg1.jpg")})` }}
         />
         <div className="relative mx-auto max-w-3xl px-6 md:px-8 text-center">
-          <SectionDivider className="mb-6 text-ochre/60" />
+          <StarMark className="mb-6 w-32 h-4 mx-auto text-ochre/70" />
           <p className="font-display italic text-2xl md:text-3xl leading-relaxed">
             {locale === "es"
               ? "“Los platos que salen de nuestra cocina son los mismos que servía mi abuelo. Algunas cosas no se tocan.”"

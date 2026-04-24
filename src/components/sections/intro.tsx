@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { content, img, localizedPath, t, type Locale } from "@/lib/content";
 import { FadeIn } from "@/components/motion";
-import { SectionDivider } from "@/components/olive-branch";
+import { KickerLine } from "@/components/ornaments";
 
 export function Intro({ locale }: { locale: Locale }) {
   const intro = content.home.intro;
@@ -9,7 +9,7 @@ export function Intro({ locale }: { locale: Locale }) {
     <section id="intro" className="relative py-24 md:py-32 overflow-hidden grain">
       <div className="mx-auto max-w-6xl px-6 md:px-8 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <FadeIn>
-          <SectionDivider label={t(intro.kicker, locale) as string} className="justify-start mb-8" />
+          <KickerLine className="mb-8">{t(intro.kicker, locale) as string}</KickerLine>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-olive-deep leading-[1.05]">
             {t(intro.heading, locale)}
             <span className="text-terracotta">.</span>

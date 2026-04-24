@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { content, img, localizedPath, type Locale } from "@/lib/content";
 import { FadeIn } from "@/components/motion";
-import { OliveBranch } from "@/components/olive-branch";
+import { AzulejoMark } from "@/components/ornaments";
 
 export function SignatureDish({ locale }: { locale: Locale }) {
   return (
@@ -42,7 +42,7 @@ export function SignatureDish({ locale }: { locale: Locale }) {
         </div>
 
         <FadeIn className="px-8 md:px-12 lg:px-16 py-16 md:py-24 flex flex-col justify-center">
-          <OliveBranch className="w-28 h-8 text-ochre/70 mb-6" />
+          <AzulejoMark className="w-32 mb-6" />
           <p className="font-display italic text-ochre text-sm tracking-[0.32em] uppercase mb-4">
             {locale === "es" ? "Receta malagueña" : "A Málaga recipe"}
           </p>
