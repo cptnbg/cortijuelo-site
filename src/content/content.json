@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "siteName": "Antigua Venta El Cortijuelo",
+    "tagline": {
+      "es": "Antigua Venta El Cortijuelo Villanueva del Trabuco Málaga",
+      "en": "Antigua Venta El Cortijuelo Villanueva del Trabuco Málaga"
+    },
+    "description": {
+      "es": "Antigua Venta El Cortijuelo Villanueva del Trabuco Málaga. Disfruta de exquisita cocina tradicional mediterránea.",
+      "en": "Antigua Venta El Cortijuelo in Villanueva del Trabuco, Málaga. Enjoy exquisite traditional Mediterranean cuisine."
+    },
+    "keywords": "restaurante, Málaga, mejores restaurantes, comidas, almuerzos, cenas, gastronomía",
+    "logo": "logo.png",
+    "logoAlt": "logo2.png",
+    "favicon": "favicon.png"
+  },
+  "contact": {
+    "phone": "+34 952 75 20 80",
+    "email": "",
+    "address": {
+      "es": "Los Alazores, km. 2,5, 29313 Villanueva del Trabuco, Málaga",
+      "en": "Los Alazores, km. 2.5, 29313 Villanueva del Trabuco, Málaga"
+    },
+    "hours": {
+      "es": "Todos los días de 08:00 a 01:00",
+      "en": "Open every day from 08:00 to 01:00"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/antiguaventaelcortijuelo",
+      "instagram": "https://www.instagram.com/explore/locations/1029722380/antigua-venta-el-cortijuelo-hnos-romero/",
+      "tripadvisor": "https://www.tripadvisor.es/Restaurant_Review-g2449418-d8685502-Reviews-Antigua_Venta_el_Cortijuelo-Villanueva_del_Trabuco_Province_of_Malaga_Andalucia.html"
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12738.380309674658!2d-4.310331!3d37.0433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d1a84e37168ed9b!2sAntigua+Venta+El+Cortijuelo+-+Hnos.+Romero!5e0!3m2!1ses!2ses!4v1541420197673"
+  },
+  "nav": [
+    { "es": "Inicio", "en": "Home", "path": "/" },
+    { "es": "Restaurante", "en": "Restaurant", "path": "/restaurante" },
+    { "es": "Galería", "en": "Gallery", "path": "/galeria" },
+    { "es": "Contacto", "en": "Contact", "path": "/contacto" }
+  ],
+  "home": {
+    "hero": {
+      "slides": ["slide1.jpg", "slide2.jpg", "slide3.jpg"],
+      "eyebrow": {
+        "es": "Desde 1948 · Villanueva del Trabuco",
+        "en": "Since 1948 · Villanueva del Trabuco"
+      },
+      "title": {
+        "es": "Del campo a la brasa,\nentre olivares",
+        "en": "From the fields to the grill,\nin the olive groves"
+      },
+      "subtitle": {
+        "es": "Cocina tradicional andaluza. Chivo malagueño al ajillo, conejo y cordero a la leña, en una venta con tres generaciones de historia.",
+        "en": "Traditional Andalusian cuisine. Málaga-style garlic goat, wood-fire rabbit and lamb, in an inn with three generations of family history."
+      },
+      "primaryCta": { "es": "Ver la carta", "en": "See the menu", "href": "/menu" },
+      "secondaryCta": { "es": "Reservar: +34 952 75 20 80", "en": "Book: +34 952 75 20 80", "href": "tel:+34952752080" },
+      "specialties": {
+        "es": ["Chivo al ajillo", "Conejo a la leña", "Cordero a la brasa", "Porra caliente"],
+        "en": ["Garlic goat", "Wood-fire rabbit", "Grilled lamb", "Hot porra"]
+      }
+    },
+    "intro": {
+      "kicker": { "es": "Antigua Venta El Cortijuelo", "en": "Antigua Venta El Cortijuelo" },
+      "heading": { "es": "Bienvenidos", "en": "Welcome" },
+      "body": {
+        "es": "Disfruta de auténtica cocina tradicional y exquisitas carnes a la brasa en Antigua Venta El Cortijuelo, en Villanueva del Trabuco. Contamos con un amplio salón decorado con encanto y con una agradable terraza para las calurosas noches de primavera y verano.",
+        "en": "Enjoy authentic traditional cuisine and exquisite grilled meats at Antigua Venta El Cortijuelo, in Villanueva del Trabuco. We offer a spacious, charmingly decorated dining room and a lovely terrace perfect for warm spring and summer evenings."
+      },
+      "cta": { "es": "El Restaurante", "en": "The Restaurant", "href": "/restaurante" },
+      "image": "inicio1.jpg"
+    },
+    "sectionTitle": {
+      "kicker": { "es": "Antigua Venta", "en": "Antigua Venta" },
+      "heading": { "es": "El Cortijuelo", "en": "El Cortijuelo" },
+      "background": "bg1.jpg"
+    },
+    "spaces": [
+      {
+        "name": { "es": "UN RESTAURANTE ÚNICO", "en": "A UNIQUE RESTAURANT" },
+        "description": {
+          "es": "Dos espacios para cualquier ocasión: aperitivo, \"afterwork\", reuniones con amigos, comidas de trabajo, cenas románticas etc.",
+          "en": "Two spaces for any occasion: aperitif, afterwork, get-togethers with friends, business lunches, romantic dinners and more."
+        },
+        "image": "inicio2.jpg",
+        "cta": { "es": "Ver más", "en": "See more", "href": "/restaurante" }
+      },
+      {
+        "name": { "es": "EXQUISITA GASTRONOMÍA", "en": "EXQUISITE GASTRONOMY" },
+        "description": {
+          "es": "Auténtica cocina tradicional con gran variedad de platos típicos de la zona como el chivo malagueño al ajillo.",
+          "en": "Authentic traditional cuisine with a wide variety of local specialties such as chivo malagueño al ajillo (Málaga-style garlic goat)."
+        },
+        "image": "inicio3.jpg",
+        "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+      },
+      {
+        "name": { "es": "EVENTOS Y CELEBRACIONES", "en": "EVENTS AND CELEBRATIONS" },
+        "description": {
+          "es": "Somos especialistas en comidas de empresa y grupos, cumpleaños, bautizos, comuniones, celebraciones y eventos en general.",
+          "en": "We specialize in company and group meals, birthdays, christenings, communions, celebrations and events of all kinds."
+        },
+        "image": "inicio4.jpg",
+        "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+      }
+    ],
+    "gastronomy": {
+      "kicker": { "es": "Antigua Venta El Cortijuelo", "en": "Antigua Venta El Cortijuelo" },
+      "heading": { "es": "Nuestras Sugerencias", "en": "Our Suggestions" },
+      "body": { "es": "", "en": "" },
+      "dishes": [
+        { "image": "carta1.jpg", "name": { "es": "", "en": "" } },
+        { "image": "carta2.jpg", "name": { "es": "", "en": "" } },
+        { "image": "carta3.jpg", "name": { "es": "", "en": "" } },
+        { "image": "carta4.jpg", "name": { "es": "", "en": "" } },
+        { "image": "carta5.jpg", "name": { "es": "", "en": "" } },
+        { "image": "carta6.jpg", "name": { "es": "", "en": "" } }
+      ]
+    },
+    "events": {
+      "kicker": { "es": "Especialistas en", "en": "Specialists in" },
+      "heading": { "es": "Eventos", "en": "Events" },
+      "subheading": { "es": "Celebra tu fiesta con nosotros", "en": "Celebrate your occasion with us" },
+      "body": {
+        "es": "Somos expertos en eventos y celebraciones de todo tipo. Ofrecemos un esmerado servicio para que disfrutes de una experiencia inolvidable.",
+        "en": "We are experts in events and celebrations of every kind. Our attentive service makes sure you enjoy an unforgettable experience."
+      },
+      "image": "eventos.jpg",
+      "background": "bg2.jpg",
+      "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+    },
+    "testimonialsHeading": {
+      "kicker": { "es": "Nuestros Clientes", "en": "Our Guests" },
+      "heading": { "es": "Opiniones", "en": "Reviews" }
+    },
+    "testimonials": [
+      {
+        "quote": {
+          "es": "Si haces una ruta de turismo rural por Villanueva del Trabuco este es el sitio ideal para reponer fuerzas después de visitar la Fuente de los Cien Caños. Su chivo y su churrasco delicioso acompañado de vino dulce de Málaga. Buen servicio y buen precio.",
+          "en": "If you're doing a rural tour around Villanueva del Trabuco, this is the perfect spot to refuel after visiting the Fuente de los Cien Caños. Their chivo (goat) and churrasco (grilled meat) are delicious, paired with Málaga sweet wine. Good service and a fair price."
+        },
+        "name": "Juan G.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "avatar": "avatar1.jpg"
+      },
+      {
+        "quote": {
+          "es": "Mi sitio favorito del interior de la provincia de Málaga. La comida está deliciosa. Qué maravilla de chuletas de cordero o de porra caliente, plato que solo como allí. No es fino para nada, pero es confortable, cálido y se come genial a un precio muy económico. Todos los días de Reyes subo allí con mi mujer a comer.",
+          "en": "My favorite place in inland Málaga province. The food is delicious. The lamb chops and the hot porra (a thick local cold-soup served warm) are wonderful, and I only eat that dish here. It's not fancy at all, but it's comfortable, warm, and you eat really well at a very reasonable price. Every Three Kings Day I go up with my wife to have lunch there."
+        },
+        "name": "Víctor C.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "avatar": "avatar2.jpg"
+      },
+      {
+        "quote": {
+          "es": "Muy buen lugar para comer. Calidad precio perfecto, lo recomiendo. Simpatía y buen trato por parte de las camareras/os.",
+          "en": "A great place to eat. Perfect value for money, highly recommended. Friendly and welcoming staff."
+        },
+        "name": "Gonzalo",
+        "source": "Facebook",
+        "rating": 5,
+        "avatar": "avatar3.jpg"
+      }
+    ],
+    "videoBackground": "bgvideo.jpg",
+    "callout": {
+      "es": "¡Llámanos! +34 952 75 20 80",
+      "en": "Call us! +34 952 75 20 80"
+    }
+  },
+  "restaurant": {
+    "pageTitle": { "es": "El Restaurante", "en": "The Restaurant" },
+    "pageTitleBackground": "bg-restaurante.jpg",
+    "intro": {
+      "kicker": { "es": "Antigua Venta El Cortijuelo", "en": "Antigua Venta El Cortijuelo" },
+      "heading": { "es": "El Restaurante", "en": "The Restaurant" },
+      "body": {
+        "es": "Antigua Venta El Cortijuelo, abierta desde 1948, se sitúa a 2,5 kilómetros de Villanueva del Trabuco y en las cercanías del nacimiento de Los Cien Caños. Esta venta fue adquirida por Francisco Romero Mejías en el año 1948 y ha permanecido abierta hasta el día de hoy con una trayectoria de Venta, Hospedería, Tienda y Restaurante. En los años 1948 a 1958 se regentaba como posada para arrieros que la utilizaban como parada en su recorrido. En 1958 la traspasa a su yerno, Eugenio Romero, el cual, aprovechando el trasiego y la ubicación de la misma, instala una pequeña tienda y zapatería que la hace más popular todavía. Así permanece en el transcurso de los años hasta hoy, que es regentada por sus hijos.",
+        "en": "Antigua Venta El Cortijuelo, open since 1948, sits 2.5 kilometers from Villanueva del Trabuco and near the springs of Los Cien Caños. The inn was acquired by Francisco Romero Mejías in 1948 and has stayed open ever since, serving over the years as a roadside inn, guesthouse, shop and restaurant. From 1948 to 1958 it ran as a lodging house for muleteers who stopped here along their routes. In 1958 Francisco passed it on to his son-in-law, Eugenio Romero, who took advantage of the steady passing trade and the location by adding a small shop and shoemaker's, making it even more popular. And so it has remained through the years to this day, now run by his children."
+      }
+    },
+    "spaces": [
+      {
+        "kicker": { "es": "Interior", "en": "Indoors" },
+        "heading": { "es": "AMPLIO SALÓN", "en": "SPACIOUS DINING ROOM" },
+        "body": {
+          "es": "Un amplio pero acogedor espacio decorado con encanto y acompañado de un servicio profesional y agradable para hacer de tu visita una experiencia inolvidable.",
+          "en": "A spacious yet welcoming room, charmingly decorated and paired with warm, professional service to make your visit an unforgettable experience."
+        },
+        "image": "restaurante1.jpg"
+      },
+      {
+        "kicker": { "es": "Exterior", "en": "Outdoors" },
+        "heading": { "es": "AGRADABLE TERRAZA", "en": "LOVELY TERRACE" },
+        "body": {
+          "es": "Si prefieres disfrutar del aire libre, contamos con una terraza exterior perfecta para las calurosas noches de primavera y verano. ¡Desearás volver!",
+          "en": "If you prefer dining outdoors, we have a terrace that's perfect for warm spring and summer evenings. You'll want to come back!"
+        },
+        "image": "restaurante2.jpg"
+      }
+    ],
+    "bannerBackground": "bgvideo.jpg",
+    "testimonialsHeading": {
+      "kicker": { "es": "Nuestros Clientes", "en": "Our Guests" },
+      "heading": { "es": "Opiniones", "en": "Reviews" }
+    },
+    "testimonials": [
+      {
+        "quote": {
+          "es": "Si haces una ruta de turismo rural por Villanueva del Trabuco este es el sitio ideal para reponer fuerzas después de visitar la Fuente de los Cien Caños. Su chivo y su churrasco delicioso acompañado de vino dulce de Málaga. Buen servicio y buen precio.",
+          "en": "If you're doing a rural tour around Villanueva del Trabuco, this is the perfect spot to refuel after visiting the Fuente de los Cien Caños. Their chivo (goat) and churrasco (grilled meat) are delicious, paired with Málaga sweet wine. Good service and a fair price."
+        },
+        "name": "Juan G.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "avatar": "avatar1.jpg"
+      },
+      {
+        "quote": {
+          "es": "Mi sitio favorito del interior de la provincia de Málaga. La comida está deliciosa. Qué maravilla de chuletas de cordero o de porra caliente, plato que solo como allí. No es fino para nada, pero es confortable, cálido y se come genial a un precio muy económico. Todos los días de Reyes subo allí con mi mujer a comer.",
+          "en": "My favorite place in inland Málaga province. The food is delicious. The lamb chops and the hot porra (a thick local cold-soup served warm) are wonderful, and I only eat that dish here. It's not fancy at all, but it's comfortable, warm, and you eat really well at a very reasonable price. Every Three Kings Day I go up with my wife to have lunch there."
+        },
+        "name": "Víctor C.",
+        "source": "Tripadvisor",
+        "rating": 5,
+        "avatar": "avatar2.jpg"
+      },
+      {
+        "quote": {
+          "es": "Muy buen lugar para comer. Calidad precio perfecto, lo recomiendo. Simpatía y buen trato por parte de las camareras/os.",
+          "en": "A great place to eat. Perfect value for money, highly recommended. Friendly and welcoming staff."
+        },
+        "name": "Gonzalo",
+        "source": "Facebook",
+        "rating": 5,
+        "avatar": "avatar3.jpg"
+      }
+    ],
+    "callout": { "es": "¡Llámanos! +34 952 75 20 80", "en": "Call us! +34 952 75 20 80" }
+  },
+  "gallery": {
+    "pageTitle": { "es": "Galería", "en": "Gallery" },
+    "pageTitleBackground": "bg-galeria.jpg",
+    "heading": { "es": "Galería", "en": "Gallery" },
+    "filters": [
+      { "key": "*", "es": "Todo", "en": "All" },
+      { "key": "interior", "es": "Interior", "en": "Indoors" },
+      { "key": "exterior", "es": "Exterior", "en": "Outdoors" },
+      { "key": "comida", "es": "Comida", "en": "Food" }
+    ],
+    "images": [
+      { "file": "galeria1.jpg", "category": "exterior" },
+      { "file": "galeria2.jpg", "category": "comida" },
+      { "file": "galeria3.jpg", "category": "interior" },
+      { "file": "galeria4.jpg", "category": "comida" },
+      { "file": "galeria5.jpg", "category": "interior" },
+      { "file": "galeria6.jpg", "category": "comida" },
+      { "file": "galeria7.jpg", "category": "comida" },
+      { "file": "galeria8.jpg", "category": "comida" },
+      { "file": "galeria9.jpg", "category": "exterior" },
+      { "file": "galeria10.jpg", "category": "interior" },
+      { "file": "galeria11.jpg", "category": "exterior" },
+      { "file": "galeria12.jpg", "category": "exterior" }
+    ],
+    "callout": { "es": "¡Llámanos! +34 952 75 20 80", "en": "Call us! +34 952 75 20 80" }
+  },
+  "contact_page": {
+    "pageTitle": { "es": "Contacto", "en": "Contact" },
+    "pageTitleBackground": "bg-contacto.jpg",
+    "heading": { "es": "Contacto", "en": "Contact" },
+    "body": { "es": "", "en": "" },
+    "blocks": [
+      {
+        "icon": "map-icon.png",
+        "label": { "es": "Dirección", "en": "Address" },
+        "value": {
+          "es": "Los Alazores, km. 2,5, 29313 Villanueva del Trabuco, Málaga",
+          "en": "Los Alazores, km. 2.5, 29313 Villanueva del Trabuco, Málaga"
+        }
+      },
+      {
+        "icon": "phone-icon.png",
+        "label": { "es": "¡Llámanos!", "en": "Call us!" },
+        "value": { "es": "+34 952 75 20 80", "en": "+34 952 75 20 80" }
+      },
+      {
+        "icon": "clock-icon.png",
+        "label": { "es": "Horario", "en": "Hours" },
+        "value": {
+          "es": "Todos los días\n\nde 08:00 a 01:00",
+          "en": "Every day\n\nfrom 08:00 to 01:00"
+        }
+      }
+    ],
+    "form": null,
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12738.380309674658!2d-4.310331!3d37.0433!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8d1a84e37168ed9b!2sAntigua+Venta+El+Cortijuelo+-+Hnos.+Romero!5e0!3m2!1ses!2ses!4v1541420197673"
+  },
+  "footer": {
+    "copyright": { "es": "Todos los derechos reservados", "en": "All rights reserved" },
+    "credit": {
+      "es": "Diseño por Infosur Publigestión, S.L.",
+      "en": "Design by Infosur Publigestión, S.L.",
+      "url": "http://infosur.es/"
+    }
+  }
+}

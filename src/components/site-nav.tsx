@@ -1,0 +1,132 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Menu, X, Phone } from "lucide-react";
+import { content, localizedPath, type Locale } from "@/lib/content";
+import { NAV_PATHS } from "@/lib/nav";
+import { LocaleSwitcher } from "./locale-switcher";
+import { cn } from "@/lib/utils";
+
+export function SiteNav({ locale }: { locale: Locale }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-linen/92 backdrop-blur-md border-b border-olive/15 shadow-[0_1px_0_0_rgba(0,0,0,0.03)]"
+          : "bg-transparent"
+      )}
+    >
+      <div className="mx-auto max-w-6xl px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
+        <Link
+          href={localizedPath("/", locale)}
+          className="flex flex-col leading-tight font-display"
+        >
+          <span
+            className={cn(
+              "text-[0.6rem] tracking-[0.25em] uppercase transition-colors",
+              scrolled ? "text-olive" : "text-olive-soft"
+            )}
+          >
+            Antigua Venta
+          </span>
+          <span
+            className={cn(
+              "text-lg md:text-xl font-semibold transition-colors",
+              scrolled ? "text-olive-deep" : "text-linen drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
+            )}
+          >
+            El Cortijuelo
+          </span>
+        </Link>
+
+        <nav className="hidden lg:flex items-center gap-7">
+          {NAV_PATHS.map((item) => (
+            <Link
+              key={item.key}
+              href={localizedPath(item.path, locale)}
+              className={cn(
+                "text-sm font-medium tracking-wide transition-colors",
+                scrolled
+                  ? "text-charcoal/80 hover:text-olive-deep"
+                  : "text-linen/90 hover:text-ochre drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
+              )}
+            >
+              {item[locale]}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden md:flex items-center gap-5">
+          <a
+            href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+            className={cn(
+              "flex items-center gap-2 text-sm font-medium transition-colors",
+              scrolled ? "text-olive-deep" : "text-linen drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
+            )}
+          >
+            <Phone className="w-4 h-4" />
+            <span className="tabular-nums">{content.contact.phone}</span>
+          </a>
+          <LocaleSwitcher current={locale} />
+        </div>
+
+        <button
+          type="button"
+          className={cn("lg:hidden p-2", scrolled ? "text-olive-deep" : "text-linen")}
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+      </div>
+
+      {open && (
+        <div className="fixed inset-0 z-[60] bg-linen flex flex-col animate-in fade-in duration-200">
+          <div className="flex items-center justify-between h-16 px-5 border-b border-olive/15">
+            <span className="font-display text-olive-deep text-lg">El Cortijuelo</span>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+              className="p-2 text-olive-deep"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+          <nav className="flex-1 flex flex-col items-center justify-center gap-7 px-6">
+            {NAV_PATHS.map((item) => (
+              <Link
+                key={item.key}
+                href={localizedPath(item.path, locale)}
+                onClick={() => setOpen(false)}
+                className="font-display text-3xl text-olive-deep"
+              >
+                {item[locale]}
+              </Link>
+            ))}
+            <a
+              href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+              className="mt-6 flex items-center gap-2 text-olive-deep"
+            >
+              <Phone className="w-5 h-5" /> {content.contact.phone}
+            </a>
+            <LocaleSwitcher current={locale} className="mt-2" />
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
+
