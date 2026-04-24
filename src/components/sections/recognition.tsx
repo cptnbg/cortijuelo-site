@@ -11,13 +11,13 @@ export function Recognition({ locale }: { locale: Locale }) {
   const items = [
     {
       icon: Flame,
-      label: locale === "es" ? "Brasa de" : "Wood fire",
-      value: locale === "es" ? "encina" : "of holm oak",
+      label: locale === "es" ? "Carnes" : "Meats",
+      value: locale === "es" ? "a la brasa" : "over the grill",
     },
     {
       icon: Sprout,
-      label: locale === "es" ? "Carnes de" : "Meat from",
-      value: locale === "es" ? "la sierra" : "the sierra",
+      label: locale === "es" ? "Productos" : "Produce",
+      value: locale === "es" ? "de la sierra" : "from the sierra",
     },
     {
       icon: Droplet,
