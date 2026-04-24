@@ -103,9 +103,25 @@ export function SiteNav({ locale }: { locale: Locale }) {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-[60] bg-linen flex flex-col animate-in fade-in duration-200">
+        <div
+          className="fixed inset-0 z-[60] flex flex-col"
+          style={{ backgroundColor: "#f5ede0" }}
+        >
           <div className="flex items-center justify-between h-16 px-5 border-b border-olive/15">
-            <span className="font-display text-olive-deep text-lg">El Cortijuelo</span>
+            <div className="flex items-center gap-3 leading-tight">
+              <HRLogo
+                variant="dark"
+                className="w-10 h-10 shrink-0 object-contain"
+              />
+              <div className="flex flex-col leading-tight">
+                <span className="text-[0.55rem] tracking-[0.25em] uppercase text-olive">
+                  Antigua Venta
+                </span>
+                <span className="font-display italic text-base leading-none text-olive-deep">
+                  El Cortijuelo
+                </span>
+              </div>
+            </div>
             <button
               type="button"
               onClick={() => setOpen(false)}

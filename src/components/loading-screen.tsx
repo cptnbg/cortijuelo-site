@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { HRLogo } from "./hr-logo";
+import { HRLogoAnimated } from "./hr-logo-animated";
 
 export function LoadingScreen() {
   const [visible, setVisible] = useState(true);
@@ -11,7 +11,7 @@ export function LoadingScreen() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     setShown(true);
-    const timer = setTimeout(() => setVisible(false), 2800);
+    const timer = setTimeout(() => setVisible(false), 3600);
     return () => clearTimeout(timer);
   }, []);
 
@@ -73,53 +73,32 @@ export function LoadingScreen() {
               Hermanos Romero
             </motion.p>
 
-            {/* HR monogram — gentle zoom-in + soft glow bloom */}
+            {/* HR monogram — draws in stroke-first, then fills, then star flashes */}
             <div className="relative">
               {/* Glow bloom behind logo */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: [0, 0.8, 0.4], scale: [0.5, 1.3, 1.15] }}
+                animate={{ opacity: [0, 0.7, 0.35], scale: [0.5, 1.3, 1.15] }}
                 transition={{
-                  duration: 1.8,
+                  duration: 2.6,
                   delay: 0.4,
                   ease: "easeOut",
-                  times: [0, 0.45, 1],
+                  times: [0, 0.5, 1],
                 }}
                 className="absolute inset-0 -m-10 rounded-full bg-ochre/30 blur-3xl"
                 aria-hidden
               />
               <motion.div
-                initial={{ opacity: 0, scale: 0.82, filter: "blur(6px)" }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  filter: "blur(0px)",
-                }}
-                transition={{
-                  duration: 1.3,
-                  delay: 0.4,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="relative"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                className="relative text-ochre drop-shadow-[0_2px_14px_rgba(200,155,75,0.45)]"
               >
-                <HRLogo
-                  variant="light"
-                  className="w-48 h-48 md:w-60 md:h-60 object-contain"
-                />
-                {/* Star shimmer — sparkle loop on top-right of the mark */}
-                <motion.span
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{
-                    opacity: [0, 1, 0.4, 1, 0.6],
-                    scale: [0.6, 1.1, 0.9, 1.05, 1],
-                  }}
-                  transition={{
-                    duration: 1.6,
-                    delay: 1.3,
-                    times: [0, 0.25, 0.5, 0.75, 1],
-                  }}
-                  aria-hidden
-                  className="pointer-events-none absolute top-[9%] right-[6%] w-4 h-4 md:w-5 md:h-5 rounded-full bg-linen blur-[6px]"
+                <HRLogoAnimated
+                  className="w-48 h-48 md:w-60 md:h-60"
+                  drawDuration={1.8}
+                  fillDelay={1.7}
+                  starDelay={2.3}
                 />
               </motion.div>
             </div>
@@ -128,7 +107,7 @@ export function LoadingScreen() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-center"
             >
               <p className="font-display text-xl md:text-2xl text-linen leading-tight tracking-wide">
@@ -143,13 +122,13 @@ export function LoadingScreen() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 1.4 }}
+              transition={{ duration: 0.9, delay: 2.5 }}
               className="flex items-center gap-3 text-[0.65rem] md:text-xs uppercase tracking-[0.4em] text-linen/55"
             >
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: 2.6, ease: "easeOut" }}
                 style={{ originX: 1 }}
                 className="block w-8 md:w-10 h-px bg-linen/40"
               />
@@ -157,7 +136,7 @@ export function LoadingScreen() {
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: 2.6, ease: "easeOut" }}
                 style={{ originX: 0 }}
                 className="block w-8 md:w-10 h-px bg-linen/40"
               />
@@ -168,7 +147,7 @@ export function LoadingScreen() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.4 }}
-            transition={{ duration: 1, delay: 1.8 }}
+            transition={{ duration: 1, delay: 2.9 }}
             className="absolute bottom-14 left-1/2 -translate-x-1/2 font-display italic text-ochre/50 text-[0.6rem] md:text-[0.65rem] tracking-[0.35em] uppercase whitespace-nowrap"
           >
             Villanueva del Trabuco · Málaga

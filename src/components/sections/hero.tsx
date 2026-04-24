@@ -31,22 +31,33 @@ export function Hero({ locale }: { locale: Locale }) {
 
   return (
     <section className="relative h-[100vh] min-h-[680px] w-full overflow-hidden text-linen">
-      {/* background image with slow ken-burns */}
-      <motion.div
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 16, ease: "easeOut" }}
-        className="absolute inset-0"
+      {/* Background video — royalty-free Mixkit reel: flames, grilled meat, paella, rustic pan cooking.
+          Falls back to hero-main.jpg for browsers that block autoplay. */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/hero-poster.jpg`}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${img(hero.slides[0])})` }}
+        <source
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/hero-reel.webm`}
+          type="video/webm"
         />
-      </motion.div>
+        <source
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/videos/hero-reel.mp4`}
+          type="video/mp4"
+        />
+      </video>
 
-      {/* tonal overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/65 via-charcoal/35 to-charcoal/92" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,155,75,0.22),_transparent_55%)]" />
+      {/* Stronger tonal overlays for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/55 via-charcoal/50 to-charcoal/95" />
+      <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(30,26,22,0.75)_0%,rgba(30,26,22,0.35)_55%,rgba(30,26,22,0.15)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,155,75,0.18),_transparent_55%)]" />
+      {/* Vignette at edges */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,rgba(0,0,0,0.55)_100%)]" />
 
       {/* corner ornaments */}
       <div className="absolute top-28 right-6 md:top-32 md:right-12 text-ochre/60 writing-mode-vertical hidden md:block pointer-events-none select-none">
