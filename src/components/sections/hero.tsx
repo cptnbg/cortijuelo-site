@@ -78,23 +78,30 @@ export function Hero({ locale }: { locale: Locale }) {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-3 mb-6"
           >
-            <span className="w-10 h-px bg-ochre" />
-            <p className="text-[0.7rem] md:text-xs uppercase tracking-[0.35em] text-ochre font-medium">
-              {t(hero.eyebrow, locale)}
-            </p>
+            <span className="block w-10 h-px bg-ochre shrink-0" />
+            <div className="flex flex-col gap-0.5 leading-tight">
+              <span className="font-display text-ochre text-[0.95rem] md:text-base tracking-[0.32em] tabular-nums">
+                EST. 1948
+              </span>
+              <span className="text-[0.55rem] md:text-[0.65rem] uppercase tracking-[0.32em] text-linen/70">
+                Villanueva del Trabuco · Málaga
+              </span>
+            </div>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-[5.75rem] leading-[1.05] md:leading-[1.02] tracking-tight max-w-4xl break-words hyphens-auto"
+            className="font-display uppercase text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] md:leading-[1.02] tracking-[0.01em] max-w-4xl"
           >
             <span className="block">{titleLine1}</span>
             {titleLine2 && (
-              <span className="block italic text-ochre/95">{titleLine2}</span>
+              <span className="block italic text-ochre/95 normal-case font-medium">
+                {titleLine2}
+              </span>
             )}
           </motion.h1>
 
