@@ -145,10 +145,10 @@ export function LoadingScreen() {
 
           {/* Fine print at the bottom */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.4 }}
-            transition={{ duration: 1, delay: 2.9 }}
-            className="absolute bottom-14 left-1/2 -translate-x-1/2 font-display italic text-ochre/50 text-[0.6rem] md:text-[0.65rem] tracking-[0.35em] uppercase whitespace-nowrap"
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2.2 }}
+            className="absolute bottom-14 left-1/2 -translate-x-1/2 font-display italic text-ochre text-[0.7rem] md:text-[0.8rem] tracking-[0.38em] uppercase whitespace-nowrap"
           >
             Villanueva del Trabuco · Málaga
           </motion.p>
