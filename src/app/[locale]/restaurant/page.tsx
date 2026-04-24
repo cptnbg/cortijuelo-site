@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/page-header";
 import { FadeIn } from "@/components/motion";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Callout } from "@/components/sections/callout";
+import { Timeline } from "@/components/sections/timeline";
 
 export default async function RestaurantPage({
   params,
@@ -38,7 +39,9 @@ export default async function RestaurantPage({
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-linen-soft">
+      <Timeline locale={locale} />
+
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-6 md:px-8 grid md:grid-cols-2 gap-10 md:gap-16">
           {r.spaces.map((space, i) => (
             <FadeIn key={i} delay={i * 0.1} className="group">

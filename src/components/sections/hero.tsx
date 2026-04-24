@@ -9,14 +9,21 @@ export function Hero({ locale }: { locale: Locale }) {
   const hero = content.home.hero;
   const title = t(hero.title, locale);
   const [titleLine1, titleLine2] = title.split("\n");
+  const year = new Date().getFullYear();
+
+  const stats = [
+    { value: `${year - 1948}`, label: locale === "es" ? "años abiertos" : "years open" },
+    { value: "3", label: locale === "es" ? "generaciones" : "generations" },
+    { value: "5★", label: locale === "es" ? "Tripadvisor" : "Tripadvisor" },
+  ];
 
   return (
-    <section className="relative h-[100vh] min-h-[640px] w-full overflow-hidden text-linen">
+    <section className="relative h-[100vh] min-h-[680px] w-full overflow-hidden text-linen">
       {/* background image with slow ken-burns */}
       <motion.div
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 14, ease: "easeOut" }}
+        transition={{ duration: 16, ease: "easeOut" }}
         className="absolute inset-0"
       >
         <div
@@ -26,25 +33,41 @@ export function Hero({ locale }: { locale: Locale }) {
       </motion.div>
 
       {/* tonal overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/35 to-charcoal/85" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,155,75,0.18),_transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/65 via-charcoal/35 to-charcoal/92" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,155,75,0.22),_transparent_55%)]" />
 
-      <div className="relative h-full flex flex-col justify-end pb-24 md:pb-28">
+      {/* corner ornaments */}
+      <div className="absolute top-28 right-6 md:top-32 md:right-12 text-ochre/60 writing-mode-vertical hidden md:block pointer-events-none select-none">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1 }}
+          className="font-display italic tracking-[0.35em] uppercase text-[0.65rem] rotate-90 origin-top-right"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          EST · MCMXLVIII · MÁLAGA
+        </motion.p>
+      </div>
+
+      <div className="relative h-full flex flex-col justify-end pb-32 md:pb-28">
         <div className="mx-auto max-w-6xl w-full px-6 md:px-8">
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="text-[0.7rem] md:text-xs uppercase tracking-[0.35em] text-ochre mb-5 font-medium"
+            className="flex items-center gap-3 mb-5"
           >
-            {t(hero.eyebrow, locale)}
-          </motion.p>
+            <span className="w-10 h-px bg-ochre" />
+            <p className="text-[0.7rem] md:text-xs uppercase tracking-[0.35em] text-ochre font-medium">
+              {t(hero.eyebrow, locale)}
+            </p>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight max-w-4xl"
+            className="font-display text-5xl md:text-7xl lg:text-[5.75rem] leading-[1.02] tracking-tight max-w-4xl"
           >
             <span className="block">{titleLine1}</span>
             {titleLine2 && (
@@ -65,7 +88,7 @@ export function Hero({ locale }: { locale: Locale }) {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.75 }}
-            className="mt-8 flex flex-wrap items-center gap-4"
+            className="mt-8 flex flex-wrap items-center gap-3"
           >
             <Link
               href={localizedPath(hero.primaryCta.href, locale)}
@@ -87,7 +110,7 @@ export function Hero({ locale }: { locale: Locale }) {
             transition={{ duration: 1, delay: 1.1 }}
             className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-[0.22em] text-linen/75"
           >
-            {(hero.specialties[locale] as string[]).map((s, i) => (
+            {(hero.specialties[locale] as readonly string[]).map((s, i) => (
               <span key={s} className="flex items-center gap-2">
                 {i > 0 && <span className="w-1 h-1 rounded-full bg-ochre/60" />}
                 {s}
@@ -96,12 +119,41 @@ export function Hero({ locale }: { locale: Locale }) {
           </motion.div>
         </div>
 
+        {/* Stats band */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.3 }}
+          className="absolute inset-x-0 bottom-0 border-t border-linen/15 bg-charcoal/60 backdrop-blur-md"
+        >
+          <div className="mx-auto max-w-6xl px-6 md:px-8 py-5 flex items-center justify-between gap-6 text-linen">
+            <div className="hidden md:block font-display italic text-ochre/90 text-sm tracking-[0.28em] uppercase">
+              {locale === "es" ? "Tres generaciones" : "Three generations"}
+            </div>
+            <div className="flex items-center gap-6 md:gap-12 ml-auto">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="flex items-baseline gap-2.5 border-l border-linen/15 pl-6 md:pl-10 first:border-l-0 first:pl-0"
+                >
+                  <span className="font-display text-3xl md:text-4xl text-ochre tabular-nums">
+                    {stat.value}
+                  </span>
+                  <span className="text-[0.65rem] md:text-xs uppercase tracking-[0.22em] text-linen/70">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
         <motion.a
           href="#intro"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.3 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 text-linen/70 hover:text-ochre transition-colors"
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute bottom-28 left-1/2 -translate-x-1/2 text-linen/60 hover:text-ochre transition-colors"
           aria-label="Scroll"
         >
           <motion.div

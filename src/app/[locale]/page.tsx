@@ -5,7 +5,7 @@ import { SpacesGrid } from "@/components/sections/spaces-grid";
 import { Gastronomy } from "@/components/sections/gastronomy";
 import { Events } from "@/components/sections/events";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Callout } from "@/components/sections/callout";
+import { FindUs } from "@/components/sections/find-us";
 
 export default async function HomePage({
   params,
@@ -21,7 +21,7 @@ export default async function HomePage({
       <Gastronomy locale={locale} />
       <Events locale={locale} />
       <Testimonials locale={locale} />
-      <Callout locale={locale} />
+      <FindUs locale={locale} />
     </>
   );
 }

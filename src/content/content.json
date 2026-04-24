@@ -67,7 +67,7 @@
         "es": "Disfruta de auténtica cocina tradicional y exquisitas carnes a la brasa en Antigua Venta El Cortijuelo, en Villanueva del Trabuco. Contamos con un amplio salón decorado con encanto y con una agradable terraza para las calurosas noches de primavera y verano.",
         "en": "Enjoy authentic traditional cuisine and exquisite grilled meats at Antigua Venta El Cortijuelo, in Villanueva del Trabuco. We offer a spacious, charmingly decorated dining room and a lovely terrace perfect for warm spring and summer evenings."
       },
-      "cta": { "es": "El Restaurante", "en": "The Restaurant", "href": "/restaurante" },
+      "cta": { "es": "El Restaurante", "en": "The Restaurant", "href": "/restaurant" },
       "image": "inicio1.jpg"
     },
     "sectionTitle": {
@@ -83,7 +83,7 @@
           "en": "Two spaces for any occasion: aperitif, afterwork, get-togethers with friends, business lunches, romantic dinners and more."
         },
         "image": "inicio2.jpg",
-        "cta": { "es": "Ver más", "en": "See more", "href": "/restaurante" }
+        "cta": { "es": "Ver más", "en": "See more", "href": "/restaurant" }
       },
       {
         "name": { "es": "EXQUISITA GASTRONOMÍA", "en": "EXQUISITE GASTRONOMY" },
@@ -92,7 +92,7 @@
           "en": "Authentic traditional cuisine with a wide variety of local specialties such as chivo malagueño al ajillo (Málaga-style garlic goat)."
         },
         "image": "inicio3.jpg",
-        "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+        "cta": { "es": "Ver más", "en": "See more", "href": "/gallery" }
       },
       {
         "name": { "es": "EVENTOS Y CELEBRACIONES", "en": "EVENTS AND CELEBRATIONS" },
@@ -101,7 +101,7 @@
           "en": "We specialize in company and group meals, birthdays, christenings, communions, celebrations and events of all kinds."
         },
         "image": "inicio4.jpg",
-        "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+        "cta": { "es": "Ver más", "en": "See more", "href": "/gallery" }
       }
     ],
     "gastronomy": {
@@ -127,7 +127,7 @@
       },
       "image": "eventos.jpg",
       "background": "bg2.jpg",
-      "cta": { "es": "Ver más", "en": "See more", "href": "/galeria" }
+      "cta": { "es": "Ver más", "en": "See more", "href": "/gallery" }
     },
     "testimonialsHeading": {
       "kicker": { "es": "Nuestros Clientes", "en": "Our Guests" },

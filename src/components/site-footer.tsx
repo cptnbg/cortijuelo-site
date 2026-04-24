@@ -1,108 +1,201 @@
 import Link from "next/link";
-import { Phone, MapPin, Clock } from "lucide-react";
-import { content, localizedPath, t, type Locale } from "@/lib/content";
+import { Phone, MapPin, Clock, ChevronRight, Utensils } from "lucide-react";
+import { content, img, localizedPath, t, type Locale } from "@/lib/content";
 import { OliveBranch } from "./olive-branch";
 import { NAV_PATHS } from "@/lib/nav";
-import { FacebookIcon, InstagramIcon } from "./social-icons";
+import { FacebookIcon, InstagramIcon, TripadvisorIcon } from "./social-icons";
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear();
+  const yearsOpen = year - 1948;
 
   return (
-    <footer className="relative bg-olive-deep text-linen/85 mt-auto">
-      <div className="absolute inset-x-0 -top-px h-16 bg-gradient-to-b from-background to-transparent pointer-events-none" />
-
-      <div className="mx-auto max-w-6xl px-6 md:px-8 pt-16 pb-10">
-        <div className="flex justify-center mb-10 text-ochre/70">
-          <OliveBranch className="w-36 h-8" />
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-10 md:gap-14">
+    <footer className="relative mt-auto">
+      {/* Reservations CTA strip */}
+      <section className="relative bg-terracotta text-linen overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay"
+          style={{ backgroundImage: `url(${img("bg1.jpg")})` }}
+        />
+        <div className="relative mx-auto max-w-6xl px-6 md:px-8 py-14 md:py-16 grid md:grid-cols-[1fr_auto] gap-8 items-center">
           <div>
-            <h3 className="font-display text-2xl text-linen mb-3">
-              Antigua Venta El Cortijuelo
-            </h3>
-            <p className="text-sm leading-relaxed text-linen/70 max-w-xs">
-              {locale === "es"
-                ? "Cocina tradicional andaluza entre olivares. Abierta desde 1948."
-                : "Traditional Andalusian cuisine among the olive groves. Open since 1948."}
+            <p className="font-display italic text-ochre text-sm tracking-[0.3em] uppercase mb-2">
+              {locale === "es" ? "Reservas" : "Reservations"}
             </p>
-            <div className="flex items-center gap-3 mt-5">
-              <a
-                href={content.contact.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="p-2 rounded-full border border-linen/25 hover:border-ochre hover:text-ochre transition-colors"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href={content.contact.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="p-2 rounded-full border border-linen/25 hover:border-ochre hover:text-ochre transition-colors"
-              >
-                <InstagramIcon className="w-4 h-4" />
-              </a>
+            <h3 className="font-display text-3xl md:text-5xl leading-[1.1]">
+              {locale === "es"
+                ? "¿Cuándo nos vemos?"
+                : "When shall we see you?"}
+            </h3>
+            <p className="text-linen/85 mt-3 max-w-md">
+              {locale === "es"
+                ? "Abierto todos los días de 08:00 a 01:00. Llama o pásate, te esperamos."
+                : "Open every day 08:00 – 01:00. Call, or just drop in. We'll be here."}
+            </p>
+          </div>
+          <a
+            href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+            className="inline-flex items-center gap-3 bg-linen text-terracotta hover:bg-ochre hover:text-charcoal transition-colors px-7 py-5 font-display text-2xl md:text-3xl tabular-nums shadow-[0_8px_40px_-10px_rgba(0,0,0,0.3)]"
+          >
+            <Phone className="w-5 h-5" />
+            {content.contact.phone}
+          </a>
+        </div>
+      </section>
+
+      {/* Main footer */}
+      <div className="relative bg-olive-deep text-linen/85 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.06] bg-repeat"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><circle cx='20' cy='20' r='1' fill='%23f5ede0'/></svg>\")",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-6xl px-6 md:px-8 pt-20 pb-10">
+          <div className="flex flex-col items-center text-center mb-14">
+            <OliveBranch className="w-40 h-9 text-ochre/70 mb-4" />
+            <p className="font-display italic text-ochre/90 text-sm tracking-[0.3em] uppercase">
+              {locale === "es" ? "Entre olivares, desde" : "Among olive groves, since"}
+            </p>
+            <p className="font-display text-6xl md:text-7xl text-linen mt-1">1948</p>
+            <p className="text-linen/60 text-sm mt-1 tracking-wider">
+              {yearsOpen}{" "}
+              {locale === "es" ? "años · 3 generaciones" : "years · 3 generations"}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-10 md:gap-12">
+            {/* Brand */}
+            <div className="md:col-span-1">
+              <h3 className="font-display text-2xl text-linen mb-3 leading-tight">
+                Antigua Venta
+                <br />
+                <span className="italic text-ochre">El Cortijuelo</span>
+              </h3>
+              <p className="text-sm leading-relaxed text-linen/70">
+                {locale === "es"
+                  ? "Cocina tradicional andaluza. Chivo, conejo y cordero a la brasa, en la sierra de Málaga."
+                  : "Traditional Andalusian cuisine. Grilled goat, rabbit and lamb, in the Málaga sierra."}
+              </p>
+              <div className="flex items-center gap-3 mt-5">
+                <a
+                  href={content.contact.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="p-2.5 rounded-full border border-linen/25 hover:border-ochre hover:text-ochre transition-colors"
+                >
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={content.contact.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="p-2.5 rounded-full border border-linen/25 hover:border-ochre hover:text-ochre transition-colors"
+                >
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={content.contact.social.tripadvisor}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Tripadvisor"
+                  className="p-2.5 rounded-full border border-linen/25 hover:border-ochre hover:text-ochre transition-colors"
+                >
+                  <TripadvisorIcon className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Nav */}
+            <div>
+              <h4 className="text-[0.7rem] uppercase tracking-[0.28em] text-ochre mb-5">
+                {locale === "es" ? "Navegar" : "Explore"}
+              </h4>
+              <ul className="space-y-2.5 text-sm">
+                {NAV_PATHS.map((item) => (
+                  <li key={item.key}>
+                    <Link
+                      href={localizedPath(item.path, locale)}
+                      className="group inline-flex items-center gap-1 text-linen/75 hover:text-ochre transition-colors"
+                    >
+                      <ChevronRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                      <span className="group-hover:translate-x-0.5 transition-transform">
+                        {item[locale]}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="text-[0.7rem] uppercase tracking-[0.28em] text-ochre mb-5">
+                {locale === "es" ? "Encuéntranos" : "Find us"}
+              </h4>
+              <ul className="space-y-4 text-sm">
+                <li className="flex gap-3">
+                  <MapPin className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
+                  <span className="text-linen/80 leading-relaxed">
+                    {t(content.contact.address, locale)}
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <Phone className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
+                  <a
+                    href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
+                    className="text-linen hover:text-ochre transition-colors tabular-nums"
+                  >
+                    {content.contact.phone}
+                  </a>
+                </li>
+                <li className="flex gap-3">
+                  <Clock className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
+                  <span className="text-linen/80">
+                    {t(content.contact.hours, locale)}
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Specialties */}
+            <div>
+              <h4 className="text-[0.7rem] uppercase tracking-[0.28em] text-ochre mb-5">
+                {locale === "es" ? "De la casa" : "From the kitchen"}
+              </h4>
+              <ul className="space-y-2 text-sm">
+                {[
+                  locale === "es" ? "Chivo malagueño al ajillo" : "Málaga-style garlic goat",
+                  locale === "es" ? "Conejo a la leña" : "Wood-fire rabbit",
+                  locale === "es" ? "Cordero a la brasa" : "Grilled lamb",
+                  locale === "es" ? "Porra caliente" : "Hot porra",
+                  locale === "es" ? "Migas de la sierra" : "Sierra migas",
+                ].map((dish) => (
+                  <li
+                    key={dish}
+                    className="flex items-center gap-2 text-linen/75 font-display italic"
+                  >
+                    <Utensils className="w-3 h-3 text-terracotta/80" />
+                    {dish}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.25em] text-ochre/90 mb-4">
-              {locale === "es" ? "Navegar" : "Explore"}
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              {NAV_PATHS.map((item) => (
-                <li key={item.key}>
-                  <Link
-                    href={localizedPath(item.path, locale)}
-                    className="text-linen/70 hover:text-ochre transition-colors"
-                  >
-                    {item[locale]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="mt-14 pt-8 border-t border-linen/15 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-linen/55">
+            <p>
+              © {year} Antigua Venta El Cortijuelo ·{" "}
+              {t(content.footer.copyright, locale)}.
+            </p>
+            <p className="italic font-display text-linen/70">
+              Hermanos Romero · Villanueva del Trabuco · Málaga
+            </p>
           </div>
-
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.25em] text-ochre/90 mb-4">
-              {locale === "es" ? "Encuéntranos" : "Find us"}
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex gap-3">
-                <MapPin className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
-                <span className="text-linen/80 leading-relaxed">
-                  {t(content.contact.address, locale)}
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <Phone className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
-                <a
-                  href={`tel:${content.contact.phone.replace(/\s/g, "")}`}
-                  className="text-linen hover:text-ochre transition-colors tabular-nums"
-                >
-                  {content.contact.phone}
-                </a>
-              </li>
-              <li className="flex gap-3">
-                <Clock className="w-4 h-4 mt-0.5 text-ochre/80 shrink-0" />
-                <span className="text-linen/80">
-                  {t(content.contact.hours, locale)}
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-14 pt-6 border-t border-linen/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-linen/50">
-          <p>
-            © {year} Antigua Venta El Cortijuelo.{" "}
-            {t(content.footer.copyright, locale)}.
-          </p>
-          <p className="italic font-display">Hermanos Romero · Villanueva del Trabuco</p>
         </div>
       </div>
     </footer>
