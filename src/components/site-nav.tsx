@@ -109,7 +109,11 @@ export function SiteNav({ locale }: { locale: Locale }) {
           style={{ backgroundColor: "#f5ede0" }}
         >
           <div className="flex items-center justify-between h-16 px-5 border-b border-olive/15">
-            <div className="flex items-center gap-3 leading-tight">
+            <Link
+              href={localizedPath("/", locale)}
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3 leading-tight"
+            >
               <HRLogo
                 variant="dark"
                 className="w-10 h-10 shrink-0 object-contain"
@@ -122,7 +126,7 @@ export function SiteNav({ locale }: { locale: Locale }) {
                   El Cortijuelo
                 </span>
               </div>
-            </div>
+            </Link>
             <button
               type="button"
               onClick={() => setOpen(false)}
