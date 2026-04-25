@@ -67,6 +67,11 @@ export function SiteNav({ locale }: { locale: Locale }) {
             <Link
               key={item.key}
               href={localizedPath(item.path, locale)}
+              onClick={() => {
+                if (item.path === "/" && typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={cn(
                 "text-sm font-medium tracking-wide transition-colors",
                 scrolled
@@ -141,7 +146,10 @@ export function SiteNav({ locale }: { locale: Locale }) {
               <Link
                 key={item.key}
                 href={localizedPath(item.path, locale)}
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="font-display text-3xl text-olive-deep"
               >
                 {item[locale]}
